@@ -18,9 +18,31 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider
         public Direction Direction { get; set; }
         public int InitialSlide { get; set; }
         public int Speed { get; set; }
+
         public bool Loop { get; set; }
+        public bool LoopFillGroupWithBlankEnabled { get; set; }
+
         public bool PaginationEnabled { get; set; }
+        public bool PaginationClickableEnabled { get; set; }
+
         public bool NavigationEnabled { get; set; }
         public bool ScrollBarEnabled { get; set; }
+
+        public bool AutoPlayEnabled { get; set; }
+        public int AutoPlayDelay { get; set; }
+        public bool AutoPlayDisableOnInteraction { get; set; }
+
+        public int SlidesPerGroup { get; set; }
+        public int SpaceBetween { get; set; }
+        public string SlidesPerView { get; set; }
+
+        public bool FreeModeEnabled { get; set; }
+
+        public int GridRows { get; set; }
+
+        public bool CenteredSlidesEnabled { get; set; }
+
+        public bool DynamicBulletsEnabled { get; set; }
+
     }
 }

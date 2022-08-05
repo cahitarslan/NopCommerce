@@ -61,9 +61,21 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.InitialSlide", "Initial Slide");
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.Speed", "Speed");
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.Loop", "Loop");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.LoopFillGroupWithBlankEnabled", "Loop Fill Group With Blank");
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.PaginationEnabled", "Pagination Enabled");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.PaginationClickableEnabled", "Pagination Clickable Enabled");
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.NavigationEnabled", "Navigation Enabled");
             await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.ScrollBarEnabled", "Scroll Bar Enabled");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayEnabled", "Auto Play Enabled");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayDelay", "Auto Play Delay");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayDisableOnInteraction", "Auto Play Disable On Interaction");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.SlidesPerGroup", "Slides Per Group");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.SpaceBetween", "Space Between");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.SlidesPerView", "Slides Per View");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.FreeModeEnabled", "Free Mode Enabled");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.GridRows", "Grid Rows");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.CenteredSlidesEnabled", "Centered Slides Enabled");
+            await _localizationService.AddOrUpdateLocaleResourceAsync("Kuantum.Plugin.Widgets.SwiperSlider.Models.DynamicBulletsEnabled", "Dynamic Bullets Enabled");
         }
 
         public override async Task UninstallAsync()

@@ -40,13 +40,49 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Models
         [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.Loop")]
         public bool Loop { get; set; }
 
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.LoopFillGroupWithBlankEnabled")]
+        public bool LoopFillGroupWithBlankEnabled { get; set; }
+
         [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.PaginationEnabled")]
         public bool PaginationEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.PaginationClickableEnabled")]
+        public bool PaginationClickableEnabled { get; set; }
 
         [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.NavigationEnabled")]
         public bool NavigationEnabled { get; set; }
 
         [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.ScrollBarEnabled")]
         public bool ScrollBarEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayEnabled")]
+        public bool AutoPlayEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayDelay")]
+        public int AutoPlayDelay { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.AutoPlayDisableOnInteraction")]
+        public bool AutoPlayDisableOnInteraction { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.SlidesPerGroup")]
+        public int SlidesPerGroup { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.SpaceBetween")]
+        public int SpaceBetween { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.SlidesPerView")]
+        public string SlidesPerView { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.FreeModeEnabled")]
+        public bool FreeModeEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.GridRows")]
+        public int GridRows { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.CenteredSlidesEnabled")]
+        public bool CenteredSlidesEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.DynamicBulletsEnabled")]
+        public bool DynamicBulletsEnabled { get; set; }
     }
 }

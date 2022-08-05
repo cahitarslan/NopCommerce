@@ -41,7 +41,9 @@ const swiper = new Swiper("@Model.SwiperCssSelector", {
     {
         <text>
         pagination: {
-        el: "@Model.PaginationCssSelector",
+            el: "@Model.PaginationCssSelector",
+            clickable: @Model.PaginationClickableEnabled.ToString().ToLower(),
+            dynamicBullets: @Model.DynamicBulletsEnabled.ToString().ToLower()
         },
         </text>
     }

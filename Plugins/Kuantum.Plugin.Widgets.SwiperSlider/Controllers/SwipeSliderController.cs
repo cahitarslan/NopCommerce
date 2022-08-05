@@ -55,9 +55,21 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
                 InitialSlide = _swiperSliderSettings.InitialSlide,
                 Speed = _swiperSliderSettings.Speed,
                 Loop = _swiperSliderSettings.Loop,
+                LoopFillGroupWithBlankEnabled = _swiperSliderSettings.LoopFillGroupWithBlankEnabled,
                 PaginationEnabled = _swiperSliderSettings.PaginationEnabled,
+                PaginationClickableEnabled = _swiperSliderSettings.PaginationClickableEnabled,
                 NavigationEnabled = _swiperSliderSettings.NavigationEnabled,
-                ScrollBarEnabled = _swiperSliderSettings.ScrollBarEnabled
+                ScrollBarEnabled = _swiperSliderSettings.ScrollBarEnabled,
+                AutoPlayEnabled = _swiperSliderSettings.AutoPlayEnabled,
+                AutoPlayDelay = _swiperSliderSettings.AutoPlayDelay,
+                AutoPlayDisableOnInteraction = _swiperSliderSettings.AutoPlayDisableOnInteraction,
+                SlidesPerGroup = _swiperSliderSettings.SlidesPerGroup,
+                SpaceBetween = _swiperSliderSettings.SpaceBetween,
+                SlidesPerView = _swiperSliderSettings.SlidesPerView,
+                FreeModeEnabled = _swiperSliderSettings.FreeModeEnabled,
+                GridRows = _swiperSliderSettings.GridRows,
+                CenteredSlidesEnabled = _swiperSliderSettings.CenteredSlidesEnabled,
+                DynamicBulletsEnabled = _swiperSliderSettings.DynamicBulletsEnabled
             };
              return View("~/Plugins/Widgets.SwiperSlider/Views/Configure.cshtml", model);
         }
@@ -74,9 +86,20 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
             _swiperSliderSettings.InitialSlide = model.InitialSlide;
             _swiperSliderSettings.Speed = model.Speed;
             _swiperSliderSettings.Loop = model.Loop;
+            _swiperSliderSettings.LoopFillGroupWithBlankEnabled = model.LoopFillGroupWithBlankEnabled;
             _swiperSliderSettings.PaginationEnabled = model.PaginationEnabled;
             _swiperSliderSettings.NavigationEnabled = model.NavigationEnabled;
             _swiperSliderSettings.ScrollBarEnabled = model.ScrollBarEnabled;
+            _swiperSliderSettings.AutoPlayEnabled = model.AutoPlayEnabled;
+            _swiperSliderSettings.AutoPlayDelay = model.AutoPlayDelay;
+            _swiperSliderSettings.AutoPlayDisableOnInteraction = model.AutoPlayDisableOnInteraction;
+            _swiperSliderSettings.SlidesPerGroup = model.SlidesPerGroup;
+            _swiperSliderSettings.SpaceBetween = model.SpaceBetween;
+            _swiperSliderSettings.SlidesPerView = model.SlidesPerView;
+            _swiperSliderSettings.FreeModeEnabled = model.FreeModeEnabled;
+            _swiperSliderSettings.GridRows = model.GridRows;
+            _swiperSliderSettings.CenteredSlidesEnabled = model.CenteredSlidesEnabled;
+            _swiperSliderSettings.DynamicBulletsEnabled = model.DynamicBulletsEnabled;
 
             await _settingService.SaveSettingAsync(_swiperSliderSettings);
             await _settingService.ClearCacheAsync();

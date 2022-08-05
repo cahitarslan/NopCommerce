@@ -16,6 +16,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Data
         public override void Up()
         {
             Create.TableFor<Slider>();
+            Create.TableFor<SliderItem>();
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "Group": "Kuantum Plugins",
+  "FriendlyName": "Demo / First Plugin",
+  "SystemName": "Demo.FirstPlugin",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.30", "4.40", "4.50" ],
+  "Author": "Cahit Arslan",
+  "DisplayOrder": 1,
+  "FileName": "Kuantum.Plugin.Demo.FirstPlugin.dll",
+  "Description": "Örnek ve ilk plugin yapısı"
+}

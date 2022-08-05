@@ -1,0 +1,11 @@
+{
+  "Group": "Kuantum Plugins",
+  "FriendlyName": "Widgets / SwiperJs Slider",
+  "SystemName": "Widgets.SiperSlider",
+  "Version": "1.0",
+  "SupportedVersions": [ "4.30", "4.40", "4.50" ],
+  "Author": "Cahit Arslan",
+  "DisplayOrder": 1,
+  "FileName": "Kuantum.Plugin.Widgets.SwiperSlider.dll",
+  "Description": "SwiperJs destekli slider"
+}

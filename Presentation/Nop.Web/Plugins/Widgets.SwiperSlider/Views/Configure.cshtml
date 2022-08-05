@@ -1,0 +1,192 @@
+﻿@model ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="SwipeSlider" asp-action="Configure" method="post">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="cards-group">
+                <div class="card card-default">
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="SwiperCssSelector" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="SwiperCssSelector" />
+                                <span asp-validation-for="SwiperCssSelector"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="PaginationCssSelector" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="PaginationCssSelector" />
+                                <span asp-validation-for="PaginationCssSelector"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="NavigationNextCssSelector" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="NavigationNextCssSelector" />
+                                <span asp-validation-for="NavigationNextCssSelector"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="NavigationPrevCssSelector" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="NavigationPrevCssSelector" />
+                                <span asp-validation-for="NavigationPrevCssSelector"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ScrollBarCssSelector" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ScrollBarCssSelector" />
+                                <span asp-validation-for="ScrollBarCssSelector"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="DirectionId" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-select asp-for="DirectionId" asp-items="@await (((Direction)Model.DirectionId).ToSelectListAsync())" />
+                                <span asp-validation-for="DirectionId"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="InitialSlide" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="InitialSlide" />
+                                <span asp-validation-for="InitialSlide"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Speed" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Speed" />
+                                <span asp-validation-for="Speed"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Loop" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Loop" />
+                                <span asp-validation-for="Loop"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="PaginationEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="PaginationEnabled" />
+                                <span asp-validation-for="PaginationEnabled"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="NavigationEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="NavigationEnabled" />
+                                <span asp-validation-for="NavigationEnabled"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ScrollBarEnabled" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ScrollBarEnabled" />
+                                <span asp-validation-for="ScrollBarEnabled"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-9 col-md-offset-3">
+                                <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>

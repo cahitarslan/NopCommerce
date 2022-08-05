@@ -1,0 +1,66 @@
+﻿{
+  "InstalledPluginNames": [
+    "Obsolete field, using only for compatibility"
+  ],
+  "InstalledPlugins": [
+    {
+      "SystemName": "Payments.PayPalCommerce",
+      "Version": "1.10"
+    },
+    {
+      "SystemName": "DiscountRequirement.MustBeAssignedToCustomerRole",
+      "Version": "1.39"
+    },
+    {
+      "SystemName": "CurrencyExchange.ECB",
+      "Version": "1.32"
+    },
+    {
+      "SystemName": "Misc.Sendinblue",
+      "Version": "3.38"
+    },
+    {
+      "SystemName": "Misc.WebApi.Frontend",
+      "Version": "1.0"
+    },
+    {
+      "SystemName": "Payments.CheckMoneyOrder",
+      "Version": "1.49"
+    },
+    {
+      "SystemName": "Payments.Manual",
+      "Version": "1.58"
+    },
+    {
+      "SystemName": "Pickup.PickupInStore",
+      "Version": "1.45"
+    },
+    {
+      "SystemName": "Shipping.FixedByWeightByTotal",
+      "Version": "2.35"
+    },
+    {
+      "SystemName": "Tax.FixedOrByCountryStateZip",
+      "Version": "1.43"
+    },
+    {
+      "SystemName": "Widgets.NivoSlider",
+      "Version": "1.45"
+    },
+    {
+      "SystemName": "Widgets.What3words",
+      "Version": "1.00"
+    },
+    {
+      "SystemName": "Demo.FirstPlugin",
+      "Version": "1.0"
+    },
+    {
+      "SystemName": "Widgets.SiperSlider",
+      "Version": "1.0"
+    }
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": []
+}

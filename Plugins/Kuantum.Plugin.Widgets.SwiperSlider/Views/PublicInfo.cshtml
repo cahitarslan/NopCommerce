@@ -1,0 +1,69 @@
+﻿@model SwiperSliderSettings
+
+<link rel="stylesheet" href="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/swiper-bundle.css" />
+<link rel="stylesheet" href="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/custom.css" />
+
+<script asp-exclude-from-bundle="true" src="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/swiper-bundle.js" asp-location="Footer"></script>
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+    </div>
+    @if (Model.PaginationEnabled)
+    {
+        <div class="swiper-pagination"></div>
+    }
+
+    @if (Model.NavigationEnabled)
+    {
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    }
+    
+    @if (Model.ScrollBarEnabled)
+    {
+        <div class="swiper-scrollbar"></div>
+    }
+</div>
+
+<script type="text/javascript">
+
+const swiper = new Swiper("@Model.SwiperCssSelector", {
+  
+        direction: "@Model.Direction.ToString().ToLower()",
+        loop: "@Model.Loop.ToString().ToLower()",
+        speed: @Model.Speed,
+
+    @if (Model.PaginationEnabled)
+    {
+        <text>
+        pagination: {
+        el: "@Model.PaginationCssSelector",
+        },
+        </text>
+    }
+
+    @if (Model.NavigationEnabled)
+    {
+        <text>
+        navigation: {
+        nextEl: "@Model.NavigationNextCssSelector",
+        prevEl: "@Model.NavigationPrevCssSelector",
+        },
+        </text>
+    }
+    
+    @if (Model.ScrollBarEnabled)
+    {
+        <text>
+        scrollbar: {
+        el: "@Model.ScrollBarCssSelector",
+        }
+        </text>
+    }
+    
+    });
+</script>

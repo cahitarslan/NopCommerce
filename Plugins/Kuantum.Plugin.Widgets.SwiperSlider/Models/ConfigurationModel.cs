@@ -84,5 +84,9 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Models
 
         [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.DynamicBulletsEnabled")]
         public bool DynamicBulletsEnabled { get; set; }
+
+        [NopResourceDisplayName("Kuantum.Plugin.Widgets.SwiperSlider.Models.CustomCss")]
+        public string CustomCss { get; set; }
+        
     }
 }

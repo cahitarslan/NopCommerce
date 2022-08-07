@@ -1,9 +1,14 @@
 ﻿@model SwiperSliderSettings
 
 <link rel="stylesheet" href="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/swiper-bundle.css" />
-<link rel="stylesheet" href="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/custom.css" />
-
 <script asp-exclude-from-bundle="true" src="~/Plugins/Widgets.SwiperSlider/Content/swiperslider/swiper-bundle.js" asp-location="Footer"></script>
+
+@if (!string.IsNullOrEmpty(Model.CustomCss))
+{
+    <style type="text/css">
+            @Model.CustomCss
+    </style>
+}
 
 <div class="swiper">
     <div class="swiper-wrapper">
@@ -22,7 +27,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     }
-    
+
     @if (Model.ScrollBarEnabled)
     {
         <div class="swiper-scrollbar"></div>
@@ -31,41 +36,89 @@
 
 <script type="text/javascript">
 
-const swiper = new Swiper("@Model.SwiperCssSelector", {
-  
+    const swiper = new Swiper("@Model.SwiperCssSelector", {
+
         direction: "@Model.Direction.ToString().ToLower()",
-        loop: "@Model.Loop.ToString().ToLower()",
+        centeredSlides: @Model.CenteredSlidesEnabled.ToString().ToLower(),
+        freeMode: @Model.FreeModeEnabled.ToString().ToLower(),
+        loop: @Model.Loop.ToString().ToLower(),
+
+        @if(Model.Loop)
+        {
+            <text>
+            loopFillGroupWithBlank: @Model.LoopFillGroupWithBlankEnabled.ToString().ToLower(),
+            </text>
+        }
         speed: @Model.Speed,
 
     @if (Model.PaginationEnabled)
     {
         <text>
-        pagination: {
+            pagination: {
             el: "@Model.PaginationCssSelector",
             clickable: @Model.PaginationClickableEnabled.ToString().ToLower(),
             dynamicBullets: @Model.DynamicBulletsEnabled.ToString().ToLower()
-        },
+                },
         </text>
     }
 
     @if (Model.NavigationEnabled)
     {
         <text>
-        navigation: {
-        nextEl: "@Model.NavigationNextCssSelector",
-        prevEl: "@Model.NavigationPrevCssSelector",
+            navigation: {
+            nextEl: "@Model.NavigationNextCssSelector",
+            prevEl: "@Model.NavigationPrevCssSelector",
         },
         </text>
     }
-    
+
     @if (Model.ScrollBarEnabled)
     {
         <text>
-        scrollbar: {
-        el: "@Model.ScrollBarCssSelector",
-        }
+            scrollbar: {
+            el: "@Model.ScrollBarCssSelector",
+        },
         </text>
     }
-    
+
+
+    @if (Model.AutoPlayEnabled)
+    {
+        <text>
+            autoplay: {
+            delay: @Model.AutoPlayDelay,
+            disableOnInteraction: @Model.AutoPlayDisableOnInteraction.ToString().ToLower(),
+        },
+        </text>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.SlidesPerView))
+    {
+        @if (Int32.TryParse(Model.SlidesPerView, out var slidePerView))
+        {
+            <text>
+                slidesPerView: @Model.SlidesPerView,
+                slidesPerGroup: @Model.SlidesPerGroup,
+            </text>
+        }
+        else
+        {
+            <text>
+                slidesPerView: 'auto',
+            </text>
+        }
+    }
+
+
+    @if (Model.SpaceBetween > 0)
+    {
+        <text>
+            spaceBetween: @Model.SpaceBetween,
+        </text>
+    }
+
+
+
+
     });
 </script>

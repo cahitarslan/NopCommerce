@@ -44,5 +44,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider
 
         public bool DynamicBulletsEnabled { get; set; }
 
+        public string CustomCss { get; set; }
+
     }
 }

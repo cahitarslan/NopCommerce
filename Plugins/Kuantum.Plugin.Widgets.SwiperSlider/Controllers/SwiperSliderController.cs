@@ -17,7 +17,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
     [AuthorizeAdmin]
     [Area(AreaNames.Admin)]
     [AutoValidateAntiforgeryToken]
-    public class SwipeSliderController : BasePluginController
+    public class SwiperSliderController : BasePluginController
     {
         #region Fields
         private readonly ISettingService _settingService;
@@ -27,7 +27,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
         #endregion
 
         #region Ctor
-        public SwipeSliderController(
+        public SwiperSliderController(
             ISettingService settingService,
             SwiperSliderSettings swiperSliderSettings, 
             INotificationService notificationService,
@@ -40,7 +40,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
         }
         #endregion
 
-
+        #region Configure
         public async Task<IActionResult> Configure()
         {
             var model = new ConfigurationModel
@@ -69,9 +69,10 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
                 FreeModeEnabled = _swiperSliderSettings.FreeModeEnabled,
                 GridRows = _swiperSliderSettings.GridRows,
                 CenteredSlidesEnabled = _swiperSliderSettings.CenteredSlidesEnabled,
-                DynamicBulletsEnabled = _swiperSliderSettings.DynamicBulletsEnabled
+                DynamicBulletsEnabled = _swiperSliderSettings.DynamicBulletsEnabled,
+                CustomCss = _swiperSliderSettings.CustomCss
             };
-             return View("~/Plugins/Widgets.SwiperSlider/Views/Configure.cshtml", model);
+            return View("~/Plugins/Widgets.SwiperSlider/Views/Configure.cshtml", model);
         }
 
         [HttpPost]
@@ -100,6 +101,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
             _swiperSliderSettings.GridRows = model.GridRows;
             _swiperSliderSettings.CenteredSlidesEnabled = model.CenteredSlidesEnabled;
             _swiperSliderSettings.DynamicBulletsEnabled = model.DynamicBulletsEnabled;
+            _swiperSliderSettings.CustomCss = model.CustomCss;
 
             await _settingService.SaveSettingAsync(_swiperSliderSettings);
             await _settingService.ClearCacheAsync();
@@ -108,5 +110,14 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider.Controllers
 
             return await Configure();
         }
+        #endregion
+
+        #region Crud
+        public async Task<IActionResult> SliderList()
+        {
+            return View("~/Plugins/Widgets.SwiperSlider/Views/SliderList.cshtml");
+        }
+        #endregion
+
     }
 }

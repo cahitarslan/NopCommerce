@@ -48,6 +48,9 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider
                 NavigationEnabled = true,
                 PaginationEnabled = true,
                 ScrollBarEnabled = false,
+                PaginationClickableEnabled = true,
+                AutoPlayEnabled = false,
+                
             };
             await _settingService.SaveSettingAsync(settings);
 
@@ -91,7 +94,7 @@ namespace Kuantum.Plugin.Widgets.SwiperSlider
 
         public override string GetConfigurationPageUrl()
         {
-            return $"{_webHelper.GetStoreLocation()}Admin/SwipeSlider/Configure";
+            return $"{_webHelper.GetStoreLocation()}Admin/SwiperSlider/Configure";
         }
 
         #endregion
